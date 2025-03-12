@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Fil-figures.css">
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filipino Figures</title>
+</head>
+<body>
+    <img src="images/menu.png"  class="menu-btn" onclick="toggleNav()">
+    <div class="sidebar">
+        <img src="images/ekis.png" class="exit-btn" onclick="toggleNav()">
+        <ul>
+            <li><a href="#">Timeline</a></li>
+            <li><a href="#">Filipino Figures</a></li>
+            <li><a href="#">Category</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </div>
+   
+    <script>
+        function toggleNav(){
+            let navBar = document.querySelector(".sidebar");
+            navBar.classList.toggle('shownav');
+        }
+    </script>
+</body>
+</html>

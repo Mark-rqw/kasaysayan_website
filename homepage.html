@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasaysayan</title>
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    
+}
+
+body{
+    max-height: 100vh;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 70%;
+    background-color:white;
+    box-shadow: -10px 0px 30px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease
+}
+
+.shownav{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.sidebar ul{
+  width: 100%;
+    display: flex;
+    margin-top: 4rem;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.sidebar a{
+    padding: 5%;
+    font-size: 2rem;
+    display: flex;
+   font-weight: 500;
+   font-size: 30px;
+   list-style-type: none;
+   text-decoration: none;
+   color: black;
+}
+
+.sidebar li{
+    padding: 5%;
+ 
+}
+
+.sidebar li:hover{
+    background-color:  hsla(0, 12%, 92%, 0.733);
+    border-radius: 0.75rem;
+}
+
+.menu-btn{
+    height: 6vh;
+    margin: 1rem;
+    padding: 0.55rem;
+    border-radius: 1rem;
+    position: absolute;
+}
+
+.exit-btn{
+    height: 6vh;
+    position: absolute;
+    right: 0;
+    margin: 0.75rem;
+
+}
+
+.main-container{
+    display: flex;
+    
+    max-height: 80vh;
+    flex-direction: column;
+
+}
+
+.war, .literature, .Filipino-figures{
+
+   height: 80vh;
+    background-color: rgb(104, 99, 99);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+  
+}
+.desc{
+    padding: 2rem;
+    text-align: justify;
+}
+
+h1{
+    letter-spacing: 2px;
+}
+
+.war p{
+    text-align: justify;
+}
+
+@media screen and (max-height: 926px) and (max-width: 480px){
+    body{
+    max-height: 100vh;
+}
+}
+    </style>
+</head>
+<body>
+   <img src="images/menu.png"  class="menu-btn" onclick="toggleNav()">
+<div class="sidebar">
+    <img src="images/ekis.png" class="exit-btn" onclick="toggleNav()">
+    <ul>
+        <li><a href="#">Timeline</a></li>
+        <li><a href="Fil-Figures.html">Filipino Figures</a></li>
+        <li><a href="#">Category</a></li>
+        <li><a href="#">About Us</a></li>
+    </ul>
+</div>
+ <div class="main-container">
+        <div class="war">
+           <h1>PHILIPPINE REPUBLIC PERIOD</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi similique eaque ducimus saepe sit blanditiis officia cum tempora. Natus sapiente blanditiis, repudiandae officia nobis neque minima quia porro deleniti. Hic?</p>
+        </div>
+  </div>
+  <div class="desc">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rerum error corrupti, aperiam fuga neque facere ad, perspiciatis quis modi nisi accusamus vero dolorum reprehenderit deleniti, iste repellat mollitia tempora.</p>
+  </div>
+
+<script>
+    function toggleNav(){
+        let navBar = document.querySelector(".sidebar");
+        navBar.classList.toggle('shownav');
+    }
+</script>
+</body>
+</html>
